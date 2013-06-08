@@ -1,4 +1,8 @@
-package com.example.trycatch;
+package com.ap.trycatch;
+
+import com.example.trycatch.R;
+import com.example.trycatch.R.layout;
+import com.example.trycatch.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
