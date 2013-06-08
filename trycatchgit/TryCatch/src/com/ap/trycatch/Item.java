@@ -2,11 +2,11 @@ package com.ap.trycatch;
 
 import android.graphics.Bitmap;
 
-public class Item {
+public abstract class Item {
 
-	private int x, y;
+	private int x, y, score;
 	private Bitmap bitmap;
-	private static int speed;
+	private static int speed, scoreModifier, density;
 	
 	public Item(int x, int y, Bitmap bitmap, int speed) {
 		this.x = x;
@@ -23,12 +23,24 @@ public class Item {
 		return y;
 	}
 	
+	public int getScore() {
+		return score;
+	}
+	
 	public Bitmap getBitmap() {
 		return bitmap;
 	}
 	
 	public int getSpeed() {
 		return speed;
+	}
+	
+	public int getScoreModifier() {
+		return scoreModifier;
+	}
+	
+	public int getDensity() {
+		return density;
 	}
 	
 	public void setX(int x) {
@@ -39,6 +51,10 @@ public class Item {
 		this.y = y;
 	}
 	
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
 	public void setBitmap(Bitmap bitmap) {
 		this.bitmap = bitmap;
 	}
@@ -46,5 +62,15 @@ public class Item {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+	
+	public void setScoreModifier(int scoreModifier) {
+		this.scoreModifier = scoreModifier;
+	}
+	
+	public void setDensity(int density) {
+		this.density = density;
+	}
+	
+	public abstract void collide();
 	
 }
