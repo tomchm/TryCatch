@@ -1,6 +1,9 @@
 package com.ap.trycatch;
 
+import com.example.trycatch.R;
+
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -14,6 +17,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	private MainThread thread;
 	
 	private boolean isTouching;
+	private Player player;
 	
 	public MainGamePanel(Context context) {
 		super(context);
@@ -21,6 +25,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 		
 		thread = new MainThread(getHolder(), this);
 		isTouching = false;
+		player = new Player(360, BitmapFactory.decodeResource(getResources(), R.drawable.background));
 		
 		setFocusable(true);
 	}
@@ -66,6 +71,6 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	
 	@Override
 	protected void onDraw(Canvas canvas){
-		
+		player.draw(canvas);
 	}
 }
