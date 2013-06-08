@@ -6,7 +6,7 @@ public abstract class Item {
 
 	private int x, y, score;
 	private Bitmap bitmap;
-	private static int speed, scoreModifier, density;
+	private static int speed = 10, scoreModifier = 1, density = 10;
 
 	public int getX(){
 		return x;
@@ -64,6 +64,6 @@ public abstract class Item {
 		this.density = density;
 	}
 	
-	public abstract void collide();
+	public abstract int collide();
 	
 }
