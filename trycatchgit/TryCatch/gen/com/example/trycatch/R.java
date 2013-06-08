@@ -25,7 +25,7 @@ public final class R {
         public static final int apple=0x7f020001;
         public static final int background=0x7f020002;
         public static final int chrome=0x7f020003;
-        public static final int dr_b=0x7f020004;
+        public static final int drb=0x7f020004;
         public static final int ic_launcher=0x7f020005;
         public static final int java=0x7f020006;
         public static final int player_sprite=0x7f020007;
