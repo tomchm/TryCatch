@@ -4,10 +4,9 @@ import android.graphics.Bitmap;
 
 public class Java extends Item {
 	
-	public Java(int x, int y, int score, Bitmap bitmap) {
+	public Java(int x, int y, Bitmap bitmap) {
 		this.x = x;
 		this.y = y;
-		this.score = score;
 		this.bitmap = bitmap;
 	}
 

@@ -4,10 +4,9 @@ import android.graphics.Bitmap;
 
 public class BerrySweetness extends Item {
 	
-	public BerrySweetness(int x, int y, int score, Bitmap bitmap) {
+	public BerrySweetness(int x, int y, Bitmap bitmap) {
 		this.x = x;
 		this.y = y;
-		this.score = score;
 		this.bitmap = bitmap;
 	}
 

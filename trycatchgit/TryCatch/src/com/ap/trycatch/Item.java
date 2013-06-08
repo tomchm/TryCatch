@@ -6,7 +6,7 @@ public abstract class Item {
 
 	protected int x, y, score;
 	protected Bitmap bitmap;
-	protected static int speed = 10, scoreModifier = 1, density = 10;
+	public static int speed = 10, scoreModifier = 1, density = 10;
 
 	public int getX(){
 		return x;

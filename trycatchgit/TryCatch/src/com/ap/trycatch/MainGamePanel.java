@@ -1,5 +1,7 @@
 package com.ap.trycatch;
 
+import java.util.ArrayList;
+
 import com.example.trycatch.R;
 
 import android.content.Context;
@@ -18,6 +20,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	
 	private boolean isTouching;
 	private Player player;
+	
 	
 	public MainGamePanel(Context context) {
 		super(context);
