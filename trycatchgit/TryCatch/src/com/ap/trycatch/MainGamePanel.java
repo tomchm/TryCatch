@@ -13,11 +13,14 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	
 	private MainThread thread;
 	
+	private boolean isTouching;
+	
 	public MainGamePanel(Context context) {
 		super(context);
 		getHolder().addCallback(this);
 		
 		thread = new MainThread(getHolder(), this);
+		isTouching = false;
 		
 		setFocusable(true);
 	}
@@ -54,6 +57,8 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	public boolean onTouchEvent(MotionEvent event){
 		if(event.getAction() == MotionEvent.ACTION_DOWN){
 			Log.d(TAG, "Coords: x="+ event.getX() + ",y="+ event.getY());
+			isTouching = true;
+			
 		}
 		
 		return super.onTouchEvent(event);
