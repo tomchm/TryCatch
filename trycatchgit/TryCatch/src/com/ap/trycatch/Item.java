@@ -7,14 +7,7 @@ public abstract class Item {
 	private int x, y, score;
 	private Bitmap bitmap;
 	private static int speed, scoreModifier, density;
-	
-	public Item(int x, int y, Bitmap bitmap, int speed) {
-		this.x = x;
-		this.y = y;
-		this.bitmap = bitmap;
-		this.speed = speed;
-	}
-	
+
 	public int getX(){
 		return x;
 	}
